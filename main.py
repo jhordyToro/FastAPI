@@ -1,7 +1,5 @@
 #Python
-from optparse import Option
 from typing import Optional
-import fastapi
 
 #Pydantic
 from pydantic import BaseModel
@@ -22,9 +20,13 @@ class persona(BaseModel):
 def home():
     return 'hola xd'
 
+#Request and response Body
+
 @app.post('/person/new')
 def people(person: persona = Body(...)):
     return person
+
+#Validaciones: Query parameters
 
 @app.get('/person/deatils')
 def details(
