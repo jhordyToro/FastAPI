@@ -1,0 +1,81 @@
+1.
+¿Qué es FastAPI?
+Un framework de desarrollo backend para Python
+2.
+¿Qué quiere decir que FastAPI sea Open Source?
+Que cualquier desarrollador en el mundo tiene acceso al código fuente y puede contribuir.
+3.
+¿Qué es un servidor?
+Ambas opciones son correctas.
+4.
+¿En cuál de las siguientes librerías NO se basa FastAPI para funcionar?
+Flask
+5.
+Starlette permite:
+Generar las funcionalidades básicas que un backend en Python necesita para estar operativo.
+6.
+¿Qué flag del comando uvicorn permite recargar automáticamente el servidor con cada uno de los cambios en el código?
+
+--reload
+
+7.
+¿Cuál de estos tipos de datos NO puede ser retornado por una path operation function?
+
+Una excepción
+8.
+¿Cuál de las siguientes es una path operation válida?
+@app.get("/") def read_root(): return {"Hello": "World"}
+
+9.
+¿Cuál de las siguientes no es una opción disponible para visualizar la documentación de nuestra API en FastAPI?
+SoapUI
+10.
+¿Qué hace el comando curl?
+
+Descargar el resultado de visitar un sitio web.
+11.
+La última parte de una URL, después del primer "/", recibe el nombre de:
+Todas las opciones son correctas
+12.
+¿Cuál de las siguientes no es una Path Operation válida?
+ROUTE
+13.
+¿Qué es una Path Operation function?
+Una función atada a un path operation decorator, que, junto al mismo, hace parte de una path operation.
+14.
+Cuando se coloca un Path Parameter en un endpoint en específico, el mismo es:
+Obligatorio
+15.
+¿En cuál de las siguientes Path Operations hay un Path Parameter correctamente definido?
+@app.get("/item/{item-id}") def read_root(item_id: Path(...)): return {"item-id": item_id}
+
+16.
+Cuando se coloca un query parameter en un endpoint en específico, el mismo es:
+Opcional
+17.
+¿Cuál de las siguientes URLs contiene un query parameter correctamente definido?
+http://127.0.0.1:8000/items/?number1=0&number2=100
+18.
+¿Con cuál de las siguientes operations no deberías enviar jamás un request body?
+GET
+19.
+¿Cuál de los siguientes parámetros no se utiliza para validar strings en un query parameter?
+gt
+20.
+¿Cuál de los siguientes valores especiales en Python establece que un query o path parameter es obligatorio?
+...
+21.
+¿Cuál de las siguientes clases no es una clase válida que permita definir el tipo de parámetro de uno en particular en la definición de una path operation function?
+Bool
+22.
+¿Es posible combinar dos request body en la respuesta http de una path operation?
+Verdadero
+23.
+¿Cuál es la clase que permite definir que el atributo de una clase es un campo de un modelo de pydantic?
+Field
+24.
+¿Desde dónde se debe importar la clase Field?
+Pydantic
+25.
+¿Cuál de los siguientes tipos de datos exóticos provenientes de pydantic permite validar que un string es un correo electrónico?
+EmailStr
