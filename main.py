@@ -87,12 +87,16 @@ def details(
         min_length=1,
         max_length=50,
         title='person name',
-        description="person name, needs a value greater than 0 and less than 50"
+        description="person name, needs a value greater than 0 and less than 50",
+        example='manuel'
     ),
     age: Optional[int] = Query(
         ...,
         gt=0,
-        it=1000)
+        it=1000,
+        example=17
+        )
+
 ):
     return {name: age}
 
@@ -103,7 +107,8 @@ def details(
         ...,
         gt=0,
         title='person id',
-        description='person id, the value must be greater than 0'
+        description='person id, the value must be greater than 0',
+        example=1234567
         )
 ):
     return {person_id: 'if it exists'}
@@ -115,12 +120,12 @@ def update_person(
         ...,
         gt=0,
         title='person ID',
-        description='this is the person ID'
+        description='this is the person ID',
+        example=1234567
         ),
     person: persona = Body(...),
-    # locate: located = Body(...)
+    locate: located = Body(...)
     ):
-    # result = person.dict()
-    # result.update(locate.dict())
-    # return result
-    return persona
+    result = person.dict()
+    result.update(locate.dict())
+    return result
