@@ -1,5 +1,4 @@
 #Python
-from doctest import Example
 from typing import Optional #esta libreria nos permite hacer un valor Optional valga la redundancia
 from enum import Enum #Esta libreria nos permite enumerar o determinar valores predeterminados
 
